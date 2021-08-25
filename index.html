@@ -8,30 +8,41 @@
   <title>Weather</title>
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="./favicon.ico">
 </head>
 
 <body class="background" onload="onLoad()">
-  <h1>Local weather</h1>
-  <main>
-    <div class="container">
-      <div id="location"></div>
+
+  <div id="container" class="container">
+
+    <section class="maininfo">
+      <div class="location" id="location"></div>
+      <!--<div id="logo">LOGO</div> -->
+      <div class="temperature js-temp" id="temperature"></div>
       <div id="description"></div>
-      <div id="humidity"></div>
-      <div id="pressure"></div>
-      <div id="temperature"></div>
-      <div id="tempmax"></div>
-      <div id="tempmin"></div>
+    </section>
+
+    <section class="secondsection">
       <div id="date"></div>
-    </div>
+      <div class="js-humidity" id="humidity"></div>
+      <div class="js-pressure" id="pressure"></div>
+      <div class="js-tempmax" id="tempmax"></div>
+      <div class="js-tempmin" id="tempmin"></div>
+    </section>
+
+
+  </div>
 
 
 
-  </main>
-  <footer class="footer">Alba Vidal GitHub</footer>
+
+  <!-- <footer class="footer">Alba Vidal GitHub</footer> -->
 
 
-
+  <div id="loader" class="loader">Loading...</div>
   <script type="text/javascript" src="./js/main.js"></script>
 </body>
 

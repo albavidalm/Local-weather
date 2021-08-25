@@ -1,5 +1,11 @@
 "use strict";
 
+const temp = document.querySelector(".js-temp");
+const humidity = document.querySelector(".js-humidity");
+const pressure = document.querySelector(".js-pressure");
+const temp_max = document.querySelector(".js-tempmax");
+const tempmin = document.querySelector(".js-tempmin");
+
 const onLoad = () => {
   navigator.geolocation.getCurrentPosition(fetchData);
 };
@@ -30,6 +36,19 @@ const setWeatherData = (data) => {
   Object.keys(weatherData).forEach((key) => {
     document.getElementById(key).textContent = weatherData[key];
   });
+  temp.innerHTML = `${weatherData.temperature}<sup>ºC</sup>`;
+  humidity.innerHTML = `Humidity ${weatherData.humidity}%`;
+  pressure.innerHTML = `Pressure ${weatherData.pressure}hPa`;
+  tempmax.innerHTML = `Max ${weatherData.tempmax}<sup class="grades">ºC</sup>`;
+  tempmin.innerHTML = `Min ${weatherData.tempmin}<sup>ºC</sup>`;
+  cleanUp();
+};
+
+const cleanUp = () => {
+  let container = document.getElementById("container");
+  let loader = document.getElementById("loader");
+  loader.style.display = "none";
+  container.style.display = "flex";
 };
 
 const getDate = () => {
