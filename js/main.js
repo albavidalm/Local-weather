@@ -14,7 +14,7 @@ const apiKey = "4eb207579fca077d92c6c79d760eb4a3";
 const fetchData = (position) => {
   const { latitude, longitude } = position.coords;
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${apiKey}`
+    `//api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${apiKey}`
   )
     .then((response) => response.json())
     .then((data) => setWeatherData(data));
