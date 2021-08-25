@@ -61,6 +61,8 @@ sup {
 .container {
   width: 24rem;
   height: 12rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   background-color: rgba(255, 255, 255, 0.425);
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.39);
@@ -75,6 +77,7 @@ sup {
 
 .maininfo {
   height: 100%;
+  padding: 0 1.8rem 0 1.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -86,10 +89,8 @@ sup {
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
   text-transform: capitalize;
-  line-height: 2rem;
 }
 
 .temperature {

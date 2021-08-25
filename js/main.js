@@ -36,11 +36,13 @@ const setWeatherData = (data) => {
   Object.keys(weatherData).forEach((key) => {
     document.getElementById(key).textContent = weatherData[key];
   });
-  temp.innerHTML = `${weatherData.temperature}<sup>ºC</sup>`;
+  temp.innerHTML = `${Math.round(weatherData.temperature)}<sup>ºC</sup>`;
   humidity.innerHTML = `Humidity ${weatherData.humidity}%`;
   pressure.innerHTML = `Pressure ${weatherData.pressure}hPa`;
-  tempmax.innerHTML = `Max ${weatherData.tempmax}<sup class="grades">ºC</sup>`;
-  tempmin.innerHTML = `Min ${weatherData.tempmin}<sup>ºC</sup>`;
+  tempmax.innerHTML = `Max ${Math.round(
+    weatherData.tempmax
+  )}<sup class="grades">ºC</sup>`;
+  tempmin.innerHTML = `Min ${Math.round(weatherData.tempmin)}<sup>ºC</sup>`;
   cleanUp();
 };
 
