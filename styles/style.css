@@ -5,6 +5,7 @@
   font-family: "Space Grotesk", sans-serif;
   color: rgb(54, 54, 54);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -195,4 +196,32 @@ sup {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.footer {
+  width: auto;
+  color: rgba(255, 255, 255, 0.836);
+  font-weight: lighter;
+  display: flex;
+  align-items: baseline;
+}
+
+.author {
+  padding-right: 0.6rem;
+}
+
+.fas,
+.fab {
+  padding-top: 0;
+  padding: 0.3rem;
+}
+
+.link,
+.link:visited {
+  color: rgba(255, 255, 255, 0.836);
+}
+
+.link:hover {
+  transform: scale(1.6);
+  transition: all 0.3s ease 0.1s;
 }
